@@ -2,10 +2,11 @@ import React from 'react';
 
 import { connect } from 'react-redux';
 
-const Video = ({activeModule, activeLesson}) => (
+const Video = ({ activeModule, activeLesson }) => (
     <div>
-        <strong>Módulo {activeModule.title}</strong>
-        <span>Aula {activeLesson.title}</span>
+        <strong>Módulo: {activeModule.title}</strong>
+        <br></br>
+        <span>Aula: {activeLesson.title}</span>
     </div>
 )
 

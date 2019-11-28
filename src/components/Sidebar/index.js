@@ -10,6 +10,14 @@ function toggleLesson(module, lesson) {
     };
 }
 
+function setEmpty() {
+    return {
+        type: 'TOGGLE_LESSON',
+        module: {},
+        lesson: {},
+    }
+}
+
 // modules vem do retorno do redux, e dispatch é uma função para disparar ações para o redux
 const Sidebar = ({ modules, dispatch }) => (
     <aside>
@@ -26,7 +34,10 @@ const Sidebar = ({ modules, dispatch }) => (
                 </ul>
             </div>
         ))}
+        <div>
+            <button onClick={() => dispatch(setEmpty())}>Limpar</button>
+        </div>
     </aside>
 );
 
-export default connect(state => ({modules: state.modules}))(Sidebar);
+export default connect(state => ({ modules: state.modules }))(Sidebar);

@@ -7,11 +7,12 @@ import Video from './components/Video';
 import store from './store';
 
 class App extends Component {
-   render() {
+  render() {
     return (
       <div className="App">
         <Provider store={store}>
           <Video />
+          <div></div>
           <Sidebar />
         </Provider>
       </div>
